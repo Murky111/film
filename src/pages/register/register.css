@@ -1,0 +1,62 @@
+.register{
+    background-color: #191E2E;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    border-radius: 10px;
+}
+.input_reg{
+    display: block;
+    background-color: #1E2538;
+    width: 240px;
+    height: 30px;
+    margin: 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+}
+input::placeholder{
+    color: #FFFFFF99;
+    padding:20px;
+}
+.p_reg{
+    color: rgb(255, 255, 255);
+    font-family: Qanelas;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px;
+   
+}
+.button_reg{
+    color: black;
+    background-color: #F2F60F;
+    width: 240px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 0px;
+    
+    
+}
+.button_reg:hover{
+    opacity: 80%;
+}
+.main_register{
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+::placeholder{
+    color: white;
+}
+.register_form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Passwordcheck{
+    color: #ff0000;
+    text-align: left;
+}

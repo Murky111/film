@@ -1,0 +1,52 @@
+.main{
+    background-color: #191E2E;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../assets/images/background.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 140px;
+    
+
+    
+}
+.Cards_wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+}
+.main_wrapper{
+    width: 80%;
+}
+.Link_wrapper{
+    display: flex;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.text{
+    color: rgb(255, 255, 255);
+    
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+.Link_genre_film{
+    text-decoration: none;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+    opacity: 35%;
+}
+.Link_wrapper_inner{
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    
+}
+.Link_genre_film:hover{
+    opacity: 100%;
+    transition: 400ms;
+}

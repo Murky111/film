@@ -1,0 +1,27 @@
+.images_film{
+    width: 250px;
+    height: 375px;
+    border-radius: 10px;
+}
+.images_film:hover{
+    opacity: 80%;
+}
+.title{
+    color: rgb(253, 253, 253);
+    opacity: 80%;
+    margin: 4px;
+}
+.genre{
+    color: #F2F60F;
+    opacity: 80%;
+    margin: 4px;
+}
+.title:hover{
+    opacity: 100%;
+    transition: 700ms;
+}
+.genre:hover{
+    opacity: 100%;
+    transition: 700ms;
+}
+

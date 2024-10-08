@@ -1,0 +1,30 @@
+.input_components::placeholder{
+    color: #FFFFFF99;
+    padding:20px;
+}
+
+.input_components{
+display: block;
+    background-color: #1E2538;
+    width: 240px;
+    margin-top: 20px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+}
+.input_error{
+    display: block;
+    background-color: #1E2538;
+    width: 240px;
+    margin-top: 20px;
+    height: 30px;
+    border: 1px solid #ff0000;
+    
+    border-radius: 5px;
+    color: white;
+    
+}
+.input_error:focus{
+    outline: none;
+}

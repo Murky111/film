@@ -1,0 +1,43 @@
+.Link_footer{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 50px;
+}
+.Link_footer:hover{
+    opacity: 75%;
+}
+.Link_politics{
+    color: #E3E6F0;
+    opacity: 75%;
+    margin: 20px;
+}
+.Link_politics:hover{
+    opacity: 100%;
+}
+.main_footer{
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color: #151A26;
+padding: 20px;
+}
+.main_footer_text{
+    color: #E3E6F0;
+    opacity: 75%;
+    margin: 20px;
+}
+.main_footer_text:hover{
+    opacity: 100%;
+}
+.link_icons_footer{
+    margin: 20px;
+}
+.link_icons_footer:hover{
+    opacity: 70%;
+}
+.main_footer_link_icons{
+    margin-bottom: 20px;
+}
