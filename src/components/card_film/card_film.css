@@ -24,4 +24,26 @@
     opacity: 100%;
     transition: 700ms;
 }
+.Button_del{
+ background-color: brown;
+ color: aliceblue;
+ height: 30px;
+ width: 100px;
+ border-radius: 10px;
+ border: 0px;
+}
 
+.Button_change{
+    background-color: rgb(4, 255, 0);
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+   }
+   .Button_del:hover{
+    opacity: 75%;
+   }
+   .Button_change:hover{
+    opacity: 75%;
+   }

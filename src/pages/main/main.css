@@ -50,3 +50,15 @@
     opacity: 100%;
     transition: 400ms;
 }
+.addProduct{
+    background-color: rgb(58, 100, 216);
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 140px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 4px;
+   }
+   .addProduct:hover{
+    opacity: 75%;
+   }
