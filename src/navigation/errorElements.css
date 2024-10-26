@@ -1,0 +1,39 @@
+.main_ErrorElement{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+.error_ErrorElement{
+    color: #FFFFFF;
+    font-size: 100px;
+    font-weight: 1000;
+    font-family: 'Qanelas';
+}
+.text_ErrorElement{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 800;
+    
+}
+.text1_ErrorElement{
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-top: 10px;
+    
+    
+}
+.back_main_page{
+    background-color: #3657CB;
+    color: #FFFFFF;
+    height: 45px;
+    width: 200px;
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}

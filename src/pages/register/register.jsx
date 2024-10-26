@@ -6,7 +6,6 @@ import './register.css'
 import { TextInput } from '../../components/text-input/text-input';
 import { useEffect } from 'react';
 import { AuthContext } from '../../App';
-
 export const Register = () => {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const navigate = useNavigate();
@@ -32,7 +31,7 @@ export const Register = () => {
             getAuth().then(({ data }) => {
                 setIsAuth(true)
                 navigate("/");
-                // localStorage.setItem("token", data.token);
+                localStorage.setItem("token", data.token);
                 
             });
             setisregistor_error(false)
@@ -51,7 +50,7 @@ export const Register = () => {
                         name={'UserName'}
                         register={register}
                         validate={{ required: true }}
-                        changevalue={setUserName}
+                        changevalue={(e) => setUserName(e.target.value)}
                     />
                     <TextInput
                         label={"Фамилия"}
@@ -59,7 +58,7 @@ export const Register = () => {
                         name={'UserSecondName'}
                         register={register}
                         validate={{ required: true }}
-                        changevalue={setUserSecondName}
+                        changevalue={(e) => setUserSecondName(e.target.value)}
                     />
                     <TextInput
                         label={"Придумайте логин"}
@@ -67,7 +66,7 @@ export const Register = () => {
                         name={'UserLogin'}
                         register={register}
                         validate={{ required: true }}
-                        changevalue={setUserLogin}
+                        changevalue={(e) => setUserLogin(e.target.value)}
                     />
                     <TextInput
                         label={"Придумайте пороль"}
@@ -75,7 +74,7 @@ export const Register = () => {
                         name={'UserPassword'}
                         register={register}
                         validate={{ required: true }}
-                        changevalue={setUserPassword}
+                        changevalue={(e) => setUserPassword(e.target.value)}
                         type={'password'}
                     />
                     <TextInput
@@ -84,7 +83,7 @@ export const Register = () => {
                         name={'UserPasswordcheck'}
                         register={register}
                         validate={{ required: true }}
-                        changevalue={setUserPasswordcheck}
+                        changevalue={(e) => setUserPasswordcheck(e.target.value)}
                         type={'password'}
                     />
                     {isregistor_error &&(<p className='Passwordcheck'>Пароли не совпадают</p>)}
@@ -94,7 +93,7 @@ export const Register = () => {
                         name={'UserTelEmail'}
                         register={register}
                         validate={{ required: true }}
-                        changevalue={setUserTelEmail}
+                        changevalue={(e) => setUserTelEmail(e.target.value)}
                     />
                     <button type="submit" className='button_reg'>Зарегистрироваться</button>
                 </form>

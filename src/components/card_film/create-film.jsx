@@ -55,7 +55,7 @@ export const CreateFilm = (props) => {
             <form onSubmit={handleSubmit(onSubmit)}>
               <TextInput
                 register={register}
-                name={"title"}
+                name={"Title"}
                 label={"Наименование"}
                 validate={{ required: true }}
                 errors={errors}
@@ -63,8 +63,15 @@ export const CreateFilm = (props) => {
               <TextInput
                 register={register}
                 errors={errors}
-                name={"price"}
-                label={"Цена"}
+                name={"Genre"}
+                label={"ЖАНР"}
+                validate={{ required: true }}
+              />
+              <TextInput
+                register={register}
+                errors={errors}
+                name={"Image"}
+                label={"картинка"}
                 validate={{ required: true }}
               />
               <button>Добавить продукт</button>

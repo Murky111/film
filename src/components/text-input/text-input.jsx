@@ -20,7 +20,7 @@ export const TextInput = ({
         placeholder={label}
         {...register(name, validate)}
         defaultValue={initialValue}
-        onChange={(e) => changevalue(e.target.value)}
+        onChange={changevalue}
         style={{ minWidth: 300, borderRadius: 4, minHeight: 30, padding: 4 }}
         
       />

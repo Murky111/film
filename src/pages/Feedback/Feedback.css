@@ -1,0 +1,89 @@
+.main_Feedback{
+    margin: 160px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_Feedback_text{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+.main_Feedback_wrapper_hader{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+.main_Feedback_wrapper_text{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.main_Feedback_wrapper_link{
+    height: 200px;
+    width: 271px;
+    background-color: #13161e;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 20px;
+    
+
+}
+.main_Feedback_wrapper_link:hover{
+    background-color: #3657CB;
+    opacity: 60%;
+    transition: 400ms;
+}
+.main_Feedback_wrapper_inner{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.text{
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+}
+.Feedback_imput{
+    display: flex;
+}
+.Feedback_form{
+    padding-top: 30px ;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+.Feedback_imput_div{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.imput{
+    margin-top: 20px;
+    width: 100%;
+    height: 275px;
+    background-color: #1E2538;
+    border-radius: 10px;
+    border: 0px;
+    color: rgb(255, 255, 255);
+}
+.imput_message{
+    margin-top: 20px;
+}
+.button_message{
+    background-color: #F2F60F;
+    width: 182px;
+    height: 60px;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 20px;
+}
+.div_button_message{
+    display: flex;
+    justify-content: center;
+}

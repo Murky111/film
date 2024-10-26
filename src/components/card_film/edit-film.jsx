@@ -3,7 +3,7 @@ import { TextInput } from '../../components/text-input/text-input';
 import ReactModal from "react-modal";
 import { addedFilm, editProduct } from "../../request/request-products";
 import { useState } from "react";
-import { editFilm } from "../../request/request";
+// import { editFilm } from "../../request/request";
 
 const customStyles = {
   content: {
@@ -74,7 +74,7 @@ export const EditFilm = (props) => {
             <form onSubmit={handleSubmit(onSubmit)}>
               <TextInput
                 register={register}
-                name={"title"}
+                name={"Title"}
                 label={"Наименование"}
                 validate={{ required: true }}
                 errors={errors}
@@ -83,8 +83,8 @@ export const EditFilm = (props) => {
               <TextInput
                 register={register}
                 errors={errors}
-                name={"price"}
-                label={"Цена"}
+                name={"Genre"}
+                label={"Жанр"}
                 validate={{ required: true }}
               />
               <button>Изменить продукт</button>

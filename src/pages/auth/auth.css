@@ -13,7 +13,6 @@
 .main_auth{
     display: flex;
     justify-content: center;
-    margin-top: 140px;
 }
 .input_author{
     display: block;

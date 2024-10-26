@@ -19,7 +19,7 @@ export const Footer = () => {
                 <Link to={"/"} className='Link_footer'>Персоны</Link>
                 <Link to={"/"} className='Link_footer'>Рейтинги</Link>
                 <Link to={"/"} className='Link_footer'>Рецензии</Link>
-                <Link to={"/"} className='Link_footer'>Каталог фильмов</Link>
+                <Link to={"/ErrorElement"} className='Link_footer'>Каталог фильмов</Link>
             </div>
             <div>
                 <p className="main_footer_text">2024 © KINOMRAK.Все права защищены</p>
