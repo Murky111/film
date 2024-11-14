@@ -3,7 +3,7 @@ import { TextInput } from '../../components/text-input/text-input';
 import ReactModal from "react-modal";
 import { addedFilm, editProduct } from "../../request/request-products";
 import { useState } from "react";
-// import { editFilm } from "../../request/request";
+import { editFilm } from "../../request/request";
 
 const customStyles = {
   content: {
@@ -50,7 +50,7 @@ export const EditFilm = (props) => {
         ]);
         onCloseModal({ status: false, id: null });
       })
-      .catch(() => setErrorForm(true));
+      .catch((e) => setErrorForm(true));
   };
 
   console.log(initialValues);
@@ -70,6 +70,7 @@ export const EditFilm = (props) => {
         <div>
           {errorForm ? (
             <div>Произошла ошибка изменения</div>
+
           ) : (
             <form onSubmit={handleSubmit(onSubmit)}>
               <TextInput

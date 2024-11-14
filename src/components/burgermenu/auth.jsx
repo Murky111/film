@@ -1,6 +1,6 @@
 import { Transition } from 'react-transition-group';
 import x from '../burgermenu/images/Vector.svg'
-import './burger.css';
+import './auth.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import vk from '../../assets/icons/vk.svg'
@@ -10,14 +10,16 @@ import { useContext } from 'react';
 import { AuthContext } from '../../App';
 import { useNavigate } from 'react-router-dom';
 import { getAuth } from '../../request/request';
-import { TextInput } from '../../components/text-input/text-input'
+import { TextInput } from '../text-input/text-input'
 import { useForm } from 'react-hook-form';
+import { RegisterMenu } from './register';
 export const BurgerMenu = ({ isOpen, onClose, children }) => {
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors }} = useForm();
     const [UserLogin, setUserLogin] = React.useState('');
     const [UserPassword, setUserPassword] = React.useState('');
     const { isAuth, setIsAuth } = useContext(AuthContext);
+    const [modalIsopen, setmodalIsopen] = React.useState(false);
 
     const onSubmit = (data) => {
         getAuth().then(({ data }) => {
@@ -34,9 +36,13 @@ export const BurgerMenu = ({ isOpen, onClose, children }) => {
     const onWrapperClick = (event) => {
         if (event.target.classList.contains("modal__wrapper")) { onClose() }
     }
+    const onCloseAuth =() => {
+        onClose()
+        setmodalIsopen(false)
+    }
 
     return (
-        <Transition in={isOpen} timeout={350} unmountOnExit={true}>
+        <Transition in={isOpen} timeout={30} unmountOnExit={true}>
             { (state) => 
                 (<div className={`modal modal--${state}`}>
                 <div className="modal__wrapper" onClick={onWrapperClick}>
@@ -69,7 +75,7 @@ export const BurgerMenu = ({ isOpen, onClose, children }) => {
                                                 <button type='submit' className='button_author' >Войти</button>
                                             </form>
                                         </div>
-                                        <Link to={"/register"} type='submit' className='button_link_reg' >Зарегистрироваться</Link>
+                                        <button className='button_link_reg' onClick={ ()=>{setmodalIsopen(true)}}>Зарегистрироваться</button>
                                         <div className='inner_wrapper'>
                                             <Link className='link_icons'><img src={vk} alt="" /></Link>
                                             <Link className='link_icons'><img src={google} alt="" /></Link>
@@ -80,6 +86,9 @@ export const BurgerMenu = ({ isOpen, onClose, children }) => {
                             </div>
               </div>
                 </div>
+                <RegisterMenu isOpen={modalIsopen} onClose={()=>{onCloseAuth()}}>
+                    
+                </RegisterMenu>
             </div>)}
         </Transition>
     );

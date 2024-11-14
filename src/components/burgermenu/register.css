@@ -38,6 +38,7 @@
     max-width: var(--modal-content-max-width);
     border-radius: 20px;
     background-color: var(--modal-content-bg-color);
+    background-color: #191E2E;
 
     transform: translateY(-50px);
     transition: opacity var(--modal-transition-duration), transform var(--modal-transition-duration);
@@ -79,22 +80,17 @@
 .modal--exited .modal__wrapper__content {
     transform: translateY(-50px);
 }
-.auth_Wrapper{
+
+.register{
     background-color: #191E2E;
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 400px;
     align-items: center;
     border-radius: 10px;
-    
-
+    margin: 0px;
 }
-.main_auth{
-    display: flex;
-    justify-content: center;
-}
-.input_author{
+.input_reg{
     display: block;
     background-color: #1E2538;
     width: 240px;
@@ -104,7 +100,11 @@
     border-radius: 5px;
     color: white;
 }
-.p_author{
+input::placeholder{
+    color: #FFFFFF99;
+    padding:20px;
+}
+.p_reg{
     color: rgb(255, 255, 255);
     font-family: Qanelas;
     font-size: 20px;
@@ -112,47 +112,35 @@
     margin: 20px;
    
 }
-.button_author{
+.button_reg{
     color: black;
     background-color: #F2F60F;
     width: 240px;
     height: 35px;
-    margin-top: 10px;
     border-radius: 10px;
     border: 0px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    
+    
 }
-.button_author:hover{
+.button_reg:hover{
     opacity: 80%;
 }
-.button_link_reg{
-    color: rgb(255, 255, 255);
-    background-color: #1E2538;
-    width: 240px;
-    height: 35px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: 0px;
-    margin-bottom: 30px;
+.main_register_modal{
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
-    padding: 3px;
-    color: rgb(255, 255, 255);
+    margin: 0px;
 }
-.button_link_reg:hover{
-    opacity: 80%;
+::placeholder{
+    color: white;
 }
-.link_icons{
-    background-color: #1E2538;
-    border-radius: 10px;
-    margin: 10px;
-    width: 41px;
-    height: 41px;
-    padding: 10px;
-}
-.auth_form{
+.register_form{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.Passwordcheck{
+    color: #ff0000;
+    text-align: left;
 }

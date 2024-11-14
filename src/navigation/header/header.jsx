@@ -9,8 +9,8 @@ import { useContext } from 'react'
 import { AuthContext } from '../../App'
 import { useState } from 'react'
 import { Preloader } from '../../components/preloader/preloader'
-import { BurgerMenu } from '../../components/burgermenu/burger'
-import { Auth } from '../../pages/auth/auth'
+import { BurgerMenu } from '../../components/burgermenu/auth'
+
 
 export const Header = () => {
     const { isAuth, setIsAuth } = useContext(AuthContext);
@@ -42,10 +42,10 @@ export const Header = () => {
                 <Link to={"/"} className='Link_hader'>Главная</Link>
             </h4>
             <h4>
-                <Link to={"/Feedback"}className='Link_hader'>Афиша</Link>
+                <Link to={"/poster"}className='Link_hader'>Афиша</Link>
             </h4>
             <h4>
-                <Link to={"/"}className='Link_hader'>Медиа</Link>
+                <Link to={"/Feedback"}className='Link_hader'>Медиа</Link>
             </h4>
             <h4>
                 <Link to={"/film"}className='Link_hader'>Фильмы</Link>
@@ -65,7 +65,10 @@ export const Header = () => {
             <button className='Vector'><img src={Vector} alt="" /></button>
             {!isAuth &&(<button  onClick={()=>{setModalIsOpen(true)}} className='author' to={"/auth"} >Войти</button>)}
             
-            <BurgerMenu  isOpen={ModalIsOpen} onClose ={()=> {setModalIsOpen(false)}}><Auth>Войти</Auth></BurgerMenu>
+            <BurgerMenu  isOpen={ModalIsOpen} onClose ={()=> {setModalIsOpen(false)}}><BurgerMenu>Войти</BurgerMenu> </BurgerMenu>
+            
+
+            
         </header>
     );
 };

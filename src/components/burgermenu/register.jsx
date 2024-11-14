@@ -1,15 +1,20 @@
-import React, { createContext, useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { getAuth } from '../../request/request';
-import { useNavigate } from 'react-router-dom';
-import './register.css'
-import { TextInput } from '../../components/text-input/text-input';
-import { useEffect } from 'react';
+import { Transition } from 'react-transition-group';
+import x from '../burgermenu/images/Vector.svg'
+import './register.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import vk from '../../assets/icons/vk.svg'
+import google from '../../assets/icons/google.svg'
+import tvit from'../../assets/icons/tvit.svg'
+import { useContext } from 'react';
 import { AuthContext } from '../../App';
-export const Register = () => {
-    const { register, handleSubmit, formState: { errors }, setValue } = useForm();
+import { useNavigate } from 'react-router-dom';
+import { getAuth } from '../../request/request';
+import { TextInput } from '../text-input/text-input'
+import { useForm } from 'react-hook-form';
+export const RegisterMenu = ({ isOpen, onClose, children }) => {
     const navigate = useNavigate();
-
+    const { register, handleSubmit, formState: { errors }} = useForm();
     const [UserName, setUserName] = React.useState('');
     const [UserSecondName, setUserSecondName] = React.useState('');
     const [UserLogin, setUserLogin] = React.useState('');
@@ -18,29 +23,32 @@ export const Register = () => {
     const [UserTelEmail, setUserTelEmail] = React.useState('');
     const [isregistor_error, setisregistor_error] = useState(false)
     const { isAuth, setIsAuth } = useContext(AuthContext);
+
     const onSubmit = (data) => {
+        getAuth().then(({ data }) => {
+            setIsAuth(true)
+            navigate("/");
+            onClose()
+            localStorage.setItem("token", data.token);
+        });
         console.log({
-            'UserName': data.UserName,
-            'UserSecondName': data.UserSecondName,
             'UserLogin': data.UserLogin,
             'UserPassword': data.UserPassword,
-            'UserPasswordcheck': data.UserPasswordcheck,
-            'UserTelEmail': data.UserTelEmail
         });
-        if (UserPassword==UserPasswordcheck){
-            getAuth().then(({ data }) => {
-                setIsAuth(true)
-                navigate("/");
-                localStorage.setItem("token", data.token);
-                
-            });
-            setisregistor_error(false)
-        }else{setisregistor_error(true)}
-        
     };
+    const onWrapperClick = (event) => {
+        if (event.target.classList.contains("modal__wrapper")) { onClose() }
+    }
 
     return (
-        <div className='main_register'>
+        <Transition in={isOpen} timeout={30} unmountOnExit={true}>
+            { (state) => 
+                (<div className={`modal modal--${state}`}>
+                <div className="modal__wrapper" onClick={onWrapperClick}>
+                    <div className="modal__wrapper__content">
+                        <button className="modal__wrapper__content__closeButton" onClick={()=>onClose()}><img src={x} alt="" /></button>
+                        
+                        <div className='main_register_modal'>
             <div className='register'>
                 <p className='p_reg'>Зарегистрироваться</p>
                 <form className='register_form' onSubmit={handleSubmit(onSubmit)}>
@@ -97,10 +105,11 @@ export const Register = () => {
                     />
                     <button type="submit" className='button_reg'>Зарегистрироваться</button>
                 </form>
-            </div>
-        </div>
+            </div>                 
+           </div>
+              </div>
+                </div>
+            </div>)}
+        </Transition>
     );
 };
-
-
-export default Register;

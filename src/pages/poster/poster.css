@@ -1,0 +1,37 @@
+.poster_main{
+    margin-top: 140px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin-left: 160px;
+    margin-right: 160px;
+
+}
+.poster_main_wrapper{
+
+}
+.text_poster{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+.text_wrapper_poster{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+.date_wrapper_poster{
+    color: rgb(255, 255, 255);
+}
+.card_wrapper_poster{
+}
+.poster_main_wrapper_inner{
+    display: flex;
+    align-items: center;
+}
+.date_wrapper_poster{
+    font-size: 20px;
+    font-weight: 700;
+}

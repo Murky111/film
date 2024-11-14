@@ -4,6 +4,11 @@ export const baseURL = axios.create({
     baseURL: "https://my-json-server.typicode.com/Murky111/fake",
     headers: {},
 })
+export const baseURL_Poster = axios.create({
+  baseURL: "https://my-json-server.typicode.com/Murky111/fakeposter",
+  headers: {},
+})
+
 
 export const getPost = () => {
     return baseURL(FILM);
@@ -25,6 +30,7 @@ export const removeOneFilm = (id) => {
 };
 
 export const editFilm = (data) => {
+  console.log(data.id)
   return baseURL.patch(`/newFilm/${data.id}`, data);
 };
 

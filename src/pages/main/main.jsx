@@ -53,7 +53,7 @@ export const Main = () => {
       const gotofilm = (tempfilmid) => {
         setFilmId(tempfilmid)
         console.log(FilmId)
-        Navigate("/film")
+        // Navigate("/film")
       }
 
       const removeFilm = (id) => {
@@ -103,7 +103,7 @@ export const Main = () => {
                               title={data.Title}
                               Genre={data.Genre}
                               onEdit={setIsEdit}
-                              onRemove={null}
+                              onRemove={removeFilm}
                               id={data.id}
                           />
                       )
@@ -113,13 +113,13 @@ export const Main = () => {
                   </div>
                   </Preloader>
                         <CreateFilm
-                setFilm={null}
+                setFilm={setNewCard}
                 onCloseModal={onCloseModal}
                 isModalOpen={isModalOpen}
               />
               {isEdit.status && (
                 <EditFilm
-                  setFilm={null}
+                  setFilm={setNewCard}
                   onCloseModal={setIsEdit}
                   isModalOpen={isEdit.status}
                   initialValues={

@@ -32,6 +32,9 @@
  border-radius: 10px;
  border: 0px;
 }
+.card_film{
+    margin: 10px;
+}
 
 .Button_change{
     background-color: rgb(4, 255, 0);
